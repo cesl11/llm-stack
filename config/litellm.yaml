@@ -1,0 +1,26 @@
+model_list:
+  - model_name: claude-qwen3-5-local
+    litellm_params:
+      model: anthropic/qwen3-5-local
+      api_base: http://host.docker.internal:8000
+      api_key: ""
+
+general_settings:
+  store_model_in_db: true
+  store_prompts_in_spend_logs: true
+
+litellm_settings:
+  master_key: soo-seecret
+  no_auth: true
+  proxy_mode: true
+  parse_tool_call_from_content: true
+  drop_params: true
+  drop_unsupported_params: true
+  telemetry: true
+  log_requests: true
+  streaming: true
+
+anthropic_proxy:
+  enabled: true
+  prefix: /
+  responses_api: true
